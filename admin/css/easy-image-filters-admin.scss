@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/roboto-regular-webfont.eot');
+    src: url('../fonts/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto-regular-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-regular-webfont.woff') format('woff'),
+         url('../fonts/roboto-regular-webfont.ttf') format('truetype'),
+         url('../fonts/roboto-regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+#eif-wrap{
+	font-family: 'Roboto';
+
+	#eif-image-wrapper{
+		text-align: center;
+		-webkit-box-shadow: 0px 17px 33px -8px rgba(10,10,10,0.86);
+		-moz-box-shadow: 0px 17px 33px -8px rgba(10,10,10,0.86);
+		box-shadow: 0px 17px 33px -8px rgba(10,10,10,0.86);
+	    margin: 30px 0;
+	    padding: 30px 0;
+
+		#eif-image{
+			max-width: 100%;
+		}
+		#eif-controls{
+			margin: 25px;
+		}
+		#eif-loader{
+			width: 100%;
+			display: none;
+		}
+	}
+	#eif-presets{
+		font-family: 'roboto';
+		text-align: center;
+		button{
+			margin: 5px;
+		}
+	}
+	#eif-filters{
+		label{
+			display: inline-block;
+			font-weight: 700;
+			margin: 10px;
+		}
+	}
+
+	.mdl-grid{
+		div.title{
+			font-size: 30px;
+			text-align: center;
+			margin: 10px 0;
+		}
+	}
+
+}
