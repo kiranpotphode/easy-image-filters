@@ -1,10 +1,9 @@
 === Easy Image Filters ===
 Contributors: kiranpotphode
-Donate link: http://kiranpotphode.com/
 Tags: media library, image, filter, effects, colorize, hue, sepia, manipulation, editing, html5,canvas, browser, brightness, contrast, vibrance, noise, presets
 Requires at least: 4.0
-Tested up to: 4.4.1
-Stable tag: 4.4.1
+Tested up to: 4.8
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,6 +43,9 @@ Only png and jpeg image formats are supported.
 2. Image manipulation interface.
 
 == Changelog ==
+
+= 1.0.1 =
+* Tested upto WordPress 4.8.
 
 = 1.0 =
 * Plugin Released.

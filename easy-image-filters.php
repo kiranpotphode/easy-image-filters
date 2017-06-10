@@ -14,11 +14,10 @@
  *
  * @wordpress-plugin
  * Plugin Name:       Easy Image Filters
- * Plugin URI:        http://kiranpotphode.com/easy-image-filters
+ * Plugin URI:        https://wordpress.org/plugins/easy-image-filters
  * Description:       Add cool filters and effects to images without leaving site admin screen. Save new image without loosing original.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Kiran Potphode
- * Author URI:        http://kiranpotphode.com/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       easy-image-filters
