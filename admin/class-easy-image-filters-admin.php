@@ -113,6 +113,12 @@ class Easy_Image_Filters_Admin {
 				wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/easy-image-filters-admin.js', array( 'jquery' ), $this->version, false );
 				wp_enqueue_script( 'caman-js', plugin_dir_url( __FILE__ ) . 'js/caman.full.min.js', array( 'jquery' ), $this->version, true );
 				wp_enqueue_script( 'material-js', plugin_dir_url( __FILE__ ) . 'js/material.min.js', array( 'jquery' ), $this->version, false );
+
+				$translation_array = array(
+					'eif_ajax_nonce' => wp_create_nonce( 'eif-ajax-nonce' ),
+				);
+
+				wp_localize_script( $this->plugin_name, 'eif_js_obj', $translation_array );
 			}
 
 		}
@@ -156,6 +162,9 @@ class Easy_Image_Filters_Admin {
 	}
 
 	public function easy_image_filters_save_image_ajax_callback() {
+
+		check_ajax_referer( 'eif-ajax-nonce', '_nonce_check' );
+
 		$uploads       = wp_upload_dir();
 		$filetype_info = wp_check_filetype( $_POST['old_image'] );
 		$file_type     = $filetype_info['type'];
@@ -178,13 +187,13 @@ class Easy_Image_Filters_Admin {
 		$attach_data = wp_generate_attachment_metadata( $attach_id, $uploads['path'] . "/" . $filename );
 		$success = wp_update_attachment_metadata( $attach_id,  $attach_data );
 
-		if( $success ){
+		if( ! empty( $attach_id ) && ! is_wp_error( $attach_id ) ){
 			echo add_query_arg( 'item', $attach_id, admin_url('upload.php') );
 		}else{
 			echo 'error';
 		}
 
-		exit(0);
+		wp_die();
 
 	}
 
