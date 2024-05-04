@@ -50,8 +50,7 @@ class Easy_Image_Filters_Public {
 	public function __construct( $plugin_name, $version ) {
 
 		$this->plugin_name = $plugin_name;
-		$this->version = $version;
-
+		$this->version     = $version;
 	}
 
 	/**
@@ -74,7 +73,6 @@ class Easy_Image_Filters_Public {
 		 */
 
 		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/easy-image-filters-public.css', array(), $this->version, 'all' );
-
 	}
 
 	/**
@@ -97,7 +95,5 @@ class Easy_Image_Filters_Public {
 		 */
 
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/easy-image-filters-public.js', array( 'jquery' ), $this->version, false );
-
 	}
-
 }
